@@ -8,13 +8,13 @@
 
 #### 3. Which exon and intron regions contains a damage site? 
 
-Give the original info of damage sites as well.
+##### Give the original info of damage sites as well.
 
 
 
 #### 4. Which exon and intron regions contains a damage or repair site? 
 
-Give the original info of damage or repair sites as well.
+##### Give the original info of damage or repair sites as well.
 
 
 
@@ -24,7 +24,7 @@ Give the original info of damage or repair sites as well.
 
 #### 6. Which exon and intron regions contains a damage or repair site at the same strand? 
 
-Give the original info of damage or repair sites as well.
+##### Give the original info of damage or repair sites as well.
 
 
 
@@ -34,7 +34,7 @@ Give the original info of damage or repair sites as well.
 
 #### 8. Which exon and intron regions contains a repair site? How many base pairs overlapping?
 
-Get the region only if at least half of the repair site is overlapping.
+##### Get the region only if at least half of the repair site is overlapping.
 
 
 
@@ -46,7 +46,7 @@ Get the region only if at least half of the repair site is overlapping.
 
 
 
-Sort the bed files. How long did it take after sorting?
+##### Sort the bed files. How long did it take after sorting?
 
 
 
@@ -58,13 +58,13 @@ Sort the bed files. How long did it take after sorting?
 
 #### 12. Combine all the regions at exon and intron bed file that are closer each other than 100 base pairs. 
 
-For each line, show how many regions combined.
+##### For each line, show how many regions combined.
 
 
 
 #### 13. Combine all the regions at exon and intron bed file that are closer each other than 100 base pairs. 
 
-For each line, show how many regions combined. What are the names of the regions that are combined?
+##### For each line, show how many regions combined. What are the names of the regions that are combined?
 
 
 

@@ -8,13 +8,13 @@
 
 #### 3. Which exon and intron regions contains a damage site? 
 
-Give the original info of damage sites as well.
+##### Give the original info of damage sites as well.
 
 `bedtools intersect -a hg38_gencode_v32_exons_introns.bed -b UV_damage.bed -wa -wb | less`
 
 #### 4. Which exon and intron regions contains a damage or repair site? 
 
-Give the original info of damage or repair sites as well.
+##### Give the original info of damage or repair sites as well.
 
 `bedtools intersect -a hg38_gencode_v32_exons_introns.bed -b UV_damage.bed UV_repair.bed -wa -wb | less`
 
@@ -24,7 +24,7 @@ Give the original info of damage or repair sites as well.
 
 #### 6. Which exon and intron regions contains a damage or repair site at the same strand? 
 
-Give the original info of damage or repair sites as well.
+##### Give the original info of damage or repair sites as well.
 
 `bedtools intersect -a hg38_gencode_v32_exons_introns.bed -b UV_damage.bed UV_repair.bed -wa -wb -s | less`
 
@@ -34,7 +34,7 @@ Give the original info of damage or repair sites as well.
 
 #### 8. Which exon and intron regions contains a repair site? How many base pairs overlapping?
 
-Get the region only if at least half of the repair site is overlapping.
+##### Get the region only if at least half of the repair site is overlapping.
 
 `bedtools intersect -a hg38_gencode_v32_exons_introns.bed -b UV_repair.bed -wo -F 0.5 | less`
 
@@ -46,7 +46,7 @@ Get the region only if at least half of the repair site is overlapping.
 
 `time bedtools intersect -a hg38_gencode_v32_exons_introns.bed -b UV_damage.bed -c > /dev/null`
 
-Sort the bed files. How long did it take after sorting?
+##### Sort the bed files. How long did it take after sorting?
 
 `sort -k1,1 -k2,2n UV_damage.bed > UV_damage_sorted.bed`
 
@@ -58,13 +58,13 @@ Sort the bed files. How long did it take after sorting?
 
 #### 12. Combine all the regions at exon and intron bed file that are closer each other than 100 base pairs. 
 
-For each line, show how many regions combined.
+##### For each line, show how many regions combined.
 
 `bedtools merge -i hg38_gencode_v32_exons_introns.bed -d 100 -c 1 -o count | less`
 
 #### 13. Combine all the regions at exon and intron bed file that are closer each other than 100 base pairs. 
 
-For each line, show how many regions combined. What are the names of the regions that are combined?
+##### For each line, show how many regions combined. What are the names of the regions that are combined?
 
 `bedtools merge -i hg38_gencode_v32_exons_introns.bed -d 100 -c 1,4 -o count,collapse | less`
 
@@ -88,5 +88,5 @@ For each line, show how many regions combined. What are the names of the regions
 
 #### 18. Convert repair bed file to fasta.
 
-`bedtools getfasta -fi /cta/groups/adebali/data/reference_genomes/human/gencode/38/genome.fa -bed UV_repair.bed -fo UV_repair.fa`
+`bedtools getfasta -fi /cta/groups/adebali/data/reference_genomes/human/gencode/38/genome.fa -bed UV_repair.bed -fo UV_repair.fa -s`
 
