@@ -1,4 +1,4 @@
-#### 1. Check the bedtools version
+#### 1. Check the bedtools version.
 
 
 
